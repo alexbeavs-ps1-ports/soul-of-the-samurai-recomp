@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Soul of the Samurai"
+id = "SLUS-00822"
+players = 1
+exe = "disc/SLUS_008.22"
+disc = "disc/Soul of the Samurai (USA).cue"
+discs = ["disc/Soul of the Samurai (USA).cue"]
+disc_serials = ["SLUS-00822"]
+load_address = "0x80010000"
+entry_pc = "0x8006234C"
+text_size = "0x00087800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Soul of the Samurai (USA).bin"
+cue_name = "Soul of the Samurai (USA).cue"
+boot_exe = "SLUS_008.22"
+known_sizes = [604814448]
+known_md5 = [
+  "1c5f4edd0c689c08fc9af95b49120d4c",
+]
+known_sha1 = [
+  "c6ca04a51955b75ce2019e9cea3c0e73c781c310",
+]
+known_crc32 = [
+  "7dcc7199",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH1001.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "Soul of the Samurai Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "65535a1ed8fb4e2fc574587989afe52af13d9054b28894572216dd8642997127"

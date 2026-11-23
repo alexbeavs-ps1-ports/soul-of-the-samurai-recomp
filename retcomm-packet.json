@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "soul-of-the-samurai-psx",
+  "name": "Soul of the Samurai",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "soul-of-the-samurai-recomp",
+  "rom_identity": {
+    "crc32": [
+      "7dcc7199"
+    ],
+    "md5": [
+      "1c5f4edd0c689c08fc9af95b49120d4c"
+    ],
+    "sha1": [
+      "c6ca04a51955b75ce2019e9cea3c0e73c781c310"
+    ],
+    "disc_serials": [
+      "SLUS-00822"
+    ],
+    "sizes": [
+      604814448
+    ],
+    "filenames": [
+      "Soul of the Samurai (USA).cue",
+      "Soul of the Samurai (USA).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "disc_fps": [
+      "65535a1ed8fb4e2fc574587989afe52af13d9054b28894572216dd8642997127"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH1001.BIN",
+    "profile": "SCPH1001",
+    "crc32": [
+      "37157331"
+    ],
+    "md5": [
+      "924e392ed05558ffdb115408c263dccf"
+    ],
+    "sha1": [
+      "10155d8d6e6e832d6ea66db9bc098321fb5e8ebf"
+    ],
+    "sha256": [
+      "71af94d1e47a68c11e8fdb9f8368040601514a42a5a399cda48c7d3bff1e99d3"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH1001.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/soul-of-the-samurai-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "soul-of-the-samurai-*-windows-x64.zip",
+      "linux-x64": "soul-of-the-samurai-*-linux-x64.zip",
+      "macos-arm64": "soul-of-the-samurai-*-macos-arm64.zip",
+      "macos-x64": "soul-of-the-samurai-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "soul_of_the_samurai.exe",
+    "linux": "soul_of_the_samurai",
+    "macos": "soul_of_the_samurai"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/soul-of-the-samurai-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

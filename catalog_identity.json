@@ -1,0 +1,48 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Soul of the Samurai",
+    "id": "SLUS-00822",
+    "boot_exe": "SLUS_008.22"
+  },
+  "marketing": {
+    "description": "",
+    "publisher": "",
+    "year": "",
+    "region": "USA",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "Soul of the Samurai (USA).cue",
+    "bin_name": "Soul of the Samurai (USA).bin",
+    "track_counts": [
+      1
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 604814448,
+      "md5": "1c5f4edd0c689c08fc9af95b49120d4c",
+      "sha1": "c6ca04a51955b75ce2019e9cea3c0e73c781c310",
+      "crc32": "7dcc7199"
+    },
+    "disc_fp": "65535a1ed8fb4e2fc574587989afe52af13d9054b28894572216dd8642997127"
+  },
+  "exe": {
+    "load_address": "0x80010000",
+    "entry_pc": "0x8006234C",
+    "text_size": "0x00087800",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 1272,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [
+    "cue has only 1 TRACK — Track-01-only dumps fail multi-track netplay/catalog gates; prefer a full Redump cue."
+  ],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

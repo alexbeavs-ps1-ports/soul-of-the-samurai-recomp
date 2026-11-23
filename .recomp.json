@@ -1,0 +1,13 @@
+{
+  "$schema": "https://recomp.fyi/schema/v1.json",
+  "game": "Soul of the Samurai",
+  "system": "PS1",
+  "type": "recomp",
+  "toolchain": "psxrecomp",
+  "status": "exploring",
+  "project": "soul-of-the-samurai-recomp",
+  "original": {
+    "region": "USA",
+    "serial": "SLUS-00822"
+  }
+}
